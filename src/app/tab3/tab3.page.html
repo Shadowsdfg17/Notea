@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
+  <ion-toolbar class="background-toolbar">
+    <ion-title class="color-title-toolbar">
+      Perfil
     </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +13,5 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-button (click)="this.logout()" class="background-button" shape=round>CERRAR SESIÓN</ion-button>
 </ion-content>

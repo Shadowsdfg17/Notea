@@ -24,3 +24,39 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.loading-wrapper{
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.background-toolbar{
+    --background: rgb(156, 12, 240);
+}
+
+.background-tab-bar{
+    --ion-tab-bar-background:rgb(235, 210, 250);
+}
+
+.color-title-toolbar{
+    color: azure;
+}
+
+.background-button{
+    --background:rgb(235, 210, 250);
+    color: rgb(0, 0, 0)
+}
+
+.background-ion-tab{
+    --color-selected: black;
+}
+
+.background-toolbar-muestraNota{
+    --background: rgb(235, 210, 250);
+}
+
+.color-title-toolbar-muestraNota{
+    color: rgb(0, 0, 0);
+}
+

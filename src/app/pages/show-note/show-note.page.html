@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar class="background-toolbar-muestraNota">
+    <ion-buttons slot="start">
+      <ion-button color="dark" (click)="this.closeNote()">
+          <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+  </ion-buttons>
+    <ion-title class="color-title-toolbar-muestraNota">{{nota.titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>
+    <br>{{nota.texto}}
+  </ion-label>
+</ion-content>
