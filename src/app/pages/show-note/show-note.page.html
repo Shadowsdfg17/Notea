@@ -5,6 +5,11 @@
           <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
   </ion-buttons>
+  <ion-button slot="end">
+    <ion-button (click)="this.tts()">
+      <ion-icon name="volume-high-outline" class="iconos"></ion-icon>
+    </ion-button>
+  </ion-button>
     <ion-title class="color-title-toolbar-muestraNota">{{nota.titulo}}</ion-title>
   </ion-toolbar>
 </ion-header>

@@ -1,3 +1,18 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="menu-main" contentId="main">
+    <ion-header>
+      <ion-toolbar class="background-toolbar">
+        <ion-title class="textColor">Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item (click)="this.activateDarkMode()"><ion-icon name="color-fill-outline"></ion-icon>{{'TEMAS.temaO' | translate}}</ion-item>
+        <ion-item (click)="this.activateDefaultMode()"><ion-icon name="color-fill-outline"></ion-icon>{{'TEMAS.temaD' | translate}}</ion-item>
+        <ion-item (click)="this.activateLightMode()"><ion-icon name="color-fill-outline"></ion-icon>{{'TEMAS.temaL' | translate}}</ion-item>
+        <ion-item (click)="this.activateRainbowMode()"><ion-icon name="color-fill-outline"></ion-icon>{{'TEMAS.temaR' | translate}}</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

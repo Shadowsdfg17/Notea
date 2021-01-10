@@ -1,38 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="background-toolbar">
-    <ion-title class="color-title-toolbar">
-      Notas
-    </ion-title> 
-   
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-searchbar placeholder="Buscar" (ionChange)="this.buscaNota($event)"> </ion-searchbar>
-  <ion-refresher slot="fixed" (ionRefresh)="this.cargaDatos($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-
-   <ion-list>
-     <ion-item-sliding *ngFor="let nota of this.listaNotasCopy;let i=index">
-       <ion-item-options side="start"  (ionSwipe)="this.messageAlertConfirm(nota.id)">
-        <ion-item-option color="danger" expandable 
-        (click)="this.messageAlertConfirm(nota.id)">
-          <ion-icon name="trash" style="font-size: x-large;" 
-          ></ion-icon>
-        </ion-item-option>
-       </ion-item-options>
-      <ion-item>
-        <ion-label (click)="this.verNota(this.nota)"><h2>{{nota.titulo}}</h2>
-          <br>{{nota.texto}}
-        </ion-label>
-      </ion-item>
-      <ion-item-options side="end"  (ionSwipe)="this.editaNota(nota)">
-        <ion-item-option color="primary" expandable
-        (click)="this.editaNota(nota)">
-          <ion-icon name="pencil" style="font-size: x-large;"></ion-icon>
-        </ion-item-option>
-       </ion-item-options>
-     </ion-item-sliding>
-   </ion-list>
-</ion-content>
+ <ion-header [translucent]="true">
+   <ion-toolbar class="background-toolbar">
+     <ion-title class="textColor">
+      {{'INICIO.titulo' | translate}}
+     </ion-title> 
+     <ion-buttons slot="start">
+       <ion-menu-button menu="menu-main"></ion-menu-button>
+     </ion-buttons>
+    
+   </ion-toolbar>
+ </ion-header>
+ <ion-content [fullscreen]="true">
+   <ion-searchbar placeholder="Buscar" (ionChange)="this.buscaNota($event)"> </ion-searchbar>
+   <ion-refresher slot="fixed" (ionRefresh)="this.cargaDatos($event)">
+     <ion-refresher-content></ion-refresher-content>
+   </ion-refresher>
+ 
+    <ion-list>
+      <ion-item-sliding *ngFor="let nota of this.listaNotasCopy;let i=index">
+        <ion-item-options side="start"  (ionSwipe)="this.messageAlertConfirm(nota.id)">
+         <ion-item-option color="danger" expandable 
+         (click)="this.messageAlertConfirm(nota.id)">
+           <ion-icon name="trash" style="font-size: x-large;" 
+           ></ion-icon>
+         </ion-item-option>
+        </ion-item-options>
+       <ion-item>
+         <ion-label (click)="this.verNota(this.nota)"><h2>{{nota.titulo}}</h2>
+           <br>{{nota.texto}}
+         </ion-label>
+       </ion-item>
+       <ion-item-options side="end"  (ionSwipe)="this.editaNota(nota)">
+         <ion-item-option color="primary" expandable
+         (click)="this.editaNota(nota)">
+           <ion-icon name="pencil" style="font-size: x-large;"></ion-icon>
+         </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+ </ion-content>
+ 

@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="background-toolbar">
-    <ion-title class="color-title-toolbar">
-      Perfil
+    <ion-title class="textColor">
+      {{'PERFIL.titulo' | translate}}
     </ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-button (click)="this.logout()" class="background-button" shape=round>CERRAR SESIÓN</ion-button>
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+        <img [src]="usuario.avatar">
+        </ion-avatar>
+        <ion-label><h2>{{usuario.name}}</h2><a href="https://mail.google.com"><h3>{{usuario.email}}</h3></a></ion-label>
+      </ion-item>
+    <ion-item>
+    <ion-label>{{'PERFIL.lenguaje1' | translate}}</ion-label>
+      <ion-select placeholder="{{'PERFIL.lenguaje2' | translate}}" (ionChange)="cLanguage($event)" interface="popover">
+        <ion-select-option value="es">{{'PERFIL.seleccionado1' | translate}}</ion-select-option>
+        <ion-select-option value="en">{{'PERFIL.seleccionado2' | translate}}</ion-select-option>
+      </ion-select>
+    </ion-item>  
+    <ion-item>
+      <ion-button (click)="this.logout()" class="background-button" shape=round> {{'PERFIL.cerrarsesion' | translate}}<ion-icon name="log-out-outline"></ion-icon></ion-button>
+    </ion-item>
+    </ion-list>
 </ion-content>

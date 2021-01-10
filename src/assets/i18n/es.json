@@ -1,0 +1,37 @@
+{   
+    "LOGIN":{
+        "login":"Inicia Sesión"
+    },
+    "INICIO":{
+        "titulo":"Notas"
+    },
+    "PAGS":{
+        "tab1":"Notas",
+        "tab2":"Añadir",
+        "tab3":"Perfil"
+    },
+    "AÑADIR":{
+        "titulo":"Añadir Nota",
+        "subtitulo":"Titulo",
+        "descripcion":"Descripción",
+        "boton":"Añadir",
+        "boton2":"Hacer foto",
+        "boton3":"Galería",
+        "boton4":"Recortar"
+        
+    },
+    "PERFIL":{
+        "titulo":"Perfil",
+        "lenguaje1":"Idioma",
+        "lenguaje2":"Idioma por defecto",
+        "cerrarsesion":"Cerrar Sesión",
+        "seleccionado1":"Español",
+        "seleccionado2":"Inglés"
+    },
+    "TEMAS":{
+        "temaO":"Tema oscuro",
+        "temaD":"Tema por Defecto",
+        "temaL":"Tema Claro",
+        "temaR": "Tema Rainbow"
+    }
+}

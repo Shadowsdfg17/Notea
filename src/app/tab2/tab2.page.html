@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="background-toolbar">
-    <ion-title class="color-title-toolbar">
-      Añadir Nota
+    <ion-title class="textColor">
+      {{'AÑADIR.titulo' | translate}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,22 +11,24 @@
     <ion-item>
       <ion-input type="text" 
       formControlName="title"
-      placeholder="Título"></ion-input>
+      placeholder="{{'AÑADIR.subtitulo' | translate}}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-textarea 
       formControlName="description"
-      placeholder="Descripción"
+      placeholder="{{'AÑADIR.descripcion' | translate}}"
       autocapitalize="true"
       auto-grow="true"></ion-textarea>
     </ion-item>
     <div style="text-align: right;">
       <ion-button 
       shape="round"
-      color="primary"
-      fill="outline"
+      class="background-button"
       type="submit"
-      [disabled]="!tasks.valid">Añadir</ion-button>
+      [disabled]="!tasks.valid">{{'AÑADIR.boton' | translate}}</ion-button>
   </div>
+  <ion-button shape="round" (click)="takePhoto()" class="background-button">{{'AÑADIR.boton2' | translate}}</ion-button>
+  <ion-button shape="round" (click)="getImage()" class="background-button">{{'AÑADIR.boton3' | translate}}</ion-button>
+  <ion-button shape="round" (click)="cropImage()" class="background-button">{{'AÑADIR.boton4' | translate}}</ion-button>
   </form>
 </ion-content>

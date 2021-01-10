@@ -1,0 +1,35 @@
+{    "LOGIN":{
+    "login":"Login"
+        },
+    "INICIO":{
+        "titulo":"Notes"
+    },
+    "PAGS":{
+        "tab1":"Notes",
+        "tab2":"Add",
+        "tab3":"Profile"
+    },
+    "AÑADIR":{
+        "titulo":"Add Note",
+        "subtitulo":"Title",
+        "descripcion":"Description",
+        "boton":"Add",
+        "boton2":"Photo",
+        "boton3":"Gallery",
+        "boton4":"Crop Image"
+    },
+    "PERFIL":{
+        "titulo":"Profile",
+        "lenguaje1":"Language",
+        "lenguaje2":"Default Language",
+        "cerrarsesion":"Logout",
+        "seleccionado1":"Spanish",
+        "seleccionado2":"English"
+    },
+    "TEMAS":{
+        "temaO":"Dark Theme",
+        "temaD":"Default Theme",
+        "temaL":"Light Theme",
+        "temaR": "Rainbow Theme"
+    }
+}

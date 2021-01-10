@@ -11,6 +11,7 @@ export class AuthService implements CanActivate {
   public user = {
     token: -1,
     name: '',
+    email:'',
     avatar: '',
     userId: '',
   }
@@ -45,6 +46,7 @@ export class AuthService implements CanActivate {
     this.user = {
       token: -1,
       name: '',
+      email:'',
       avatar: '',
       userId: '',
     }
@@ -59,6 +61,7 @@ export class AuthService implements CanActivate {
         this.user = {
           token: u['accessToken'],
           name: u['displayName'],
+          email: u['email'],
           avatar: u['imageUrl'],
           userId: u['userId'],
 
@@ -69,6 +72,7 @@ export class AuthService implements CanActivate {
       this.user = {
         token: -1,
         name: '',
+        email: '',
         avatar: '',
         userId: '',
       }

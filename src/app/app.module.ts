@@ -18,24 +18,57 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { AuthService } from './services/auth.service';
 
+//CAMARA
+import { Camera } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { FileTransfer, FileUploadOptions, FileTransferObject} from '@ionic-native/file-transfer/ngx';
+
+//TTS
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+
+//TRADUCTOR
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { IonicStorageModule } from '@ionic/storage';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');}
+
+
 @NgModule({
   declarations: [AppComponent,EditNotaPage],
   entryComponents: [EditNotaPage],
   imports: [
     BrowserModule, 
     ReactiveFormsModule,
+    HttpClientModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(), 
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    File,
+    Camera,
+    FileTransfer,
+    TextToSpeech,
     NotasService,
     NativeStorage,
     GooglePlus,
     AuthService,
+  
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
