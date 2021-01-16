@@ -47,8 +47,9 @@ export class AppComponent {
   
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      this.statusBar.styleBlackTranslucent();
       this.splashScreen.hide();
+      this.theme.modeSelected();
       this.authS.init();
       this.language.setInitialAppLanguage();
     });
